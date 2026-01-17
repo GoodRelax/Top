@@ -11,6 +11,7 @@
             --border-color: #e0e0e0;
             --hover-bg: #fafafa;
             --accent-color: #0066cc;
+            --link-color: #0066cc;
         }
 
         @media (prefers-color-scheme: dark) {
@@ -20,6 +21,7 @@
                 --border-color: #404040;
                 --hover-bg: #252525;
                 --accent-color: #4da6ff;
+                --link-color: #4da6ff;
             }
         }
 
@@ -43,9 +45,18 @@
             top: 0.5rem;
             right: 0.5rem;
             font-size: 0.75rem;
-            color: var(--text-color);
-            opacity: 0.6;
             z-index: 1000;
+        }
+
+        .copyright a {
+            color: var(--text-color);
+            text-decoration: none;
+            opacity: 0.6;
+            transition: opacity 0.2s;
+        }
+
+        .copyright a:hover {
+            opacity: 1;
         }
 
         .container {
@@ -94,14 +105,13 @@
         }
 
         a {
-            color: var(--text-color);
-            text-decoration: none;
-            transition: color 0.2s;
+            color: var(--link-color);
+            text-decoration: underline;
+            transition: opacity 0.2s;
         }
 
         a:hover {
-            color: var(--accent-color);
-            text-decoration: underline;
+            opacity: 0.7;
         }
 
         /* Responsive */
@@ -131,7 +141,9 @@
     </style>
 </head>
 <body>
-    <div class="copyright">© 2026 GoodRelax. MIT License.</div>
+    <div class="copyright">
+        <a href="https://github.com/GoodRelax" target="_blank" rel="noopener noreferrer">© 2026 GoodRelax. MIT License.</a>
+    </div>
     
     <div class="container">
         <h1>GoodRelax's Contents List</h1>
