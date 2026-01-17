@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoodRelax's Contents List</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #1a1a1a;
+            --border-color: #e0e0e0;
+            --hover-bg: #fafafa;
+            --accent-color: #0066cc;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #1a1a1a;
+                --text-color: #e0e0e0;
+                --border-color: #404040;
+                --hover-bg: #252525;
+                --accent-color: #4da6ff;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', Meiryo, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .copyright {
+            position: fixed;
+            top: 0.5rem;
+            right: 0.5rem;
+            font-size: 0.75rem;
+            color: var(--text-color);
+            opacity: 0.6;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: var(--accent-color);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+            background: var(--bg-color);
+        }
+
+        thead th {
+            padding: 1rem;
+            text-align: left;
+            font-weight: 700;
+            border-bottom: 1px solid var(--border-color);
+            background: transparent;
+        }
+
+        th:nth-child(1) { width: 15%; }
+        th:nth-child(2) { width: 42.5%; }
+        th:nth-child(3) { width: 42.5%; }
+
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: middle;
+        }
+
+        tbody tr:hover {
+            background: var(--hover-bg);
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.5rem;
+            }
+
+            .copyright {
+                font-size: 0.65rem;
+                top: 0.25rem;
+                right: 0.25rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            th, td {
+                padding: 0.75rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="copyright">© 2026 GoodRelax. MIT License.</div>
+    
+    <div class="container">
+        <h1>GoodRelax's Contents List</h1>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Title</th>
+                    <th>Title (jp)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>UML</td>
+                    <td><a href="https://goodrelax.github.io/gr_miscellaneous/class-diagram-cheat-sheet.html">Class Diagram Cheat Sheet</a></td>
+                    <td><a href="https://goodrelax.github.io/gr_miscellaneous/class-diagram-cheat-sheet-ja.html">クラス図 チートシート</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
